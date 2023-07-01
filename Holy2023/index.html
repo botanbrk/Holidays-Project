@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Happy Holi 2023</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- 
+	Image Attribution
+
+	Image Source : https://www.freepik.com
+
+	Image by milano83 on Freepik
+
+	Vector Link : https://www.freepik.com/free-vector/coloured-paint-stains-collection_938876.htm
+	 -->
+		<h2>Happy Holi</h2>
+		<script type="text/javascript">
+			var images = [
+				'url("clr01.png")',
+				'url("clr02.png")',
+				'url("clr03.png")',
+				'url("clr04.png")',
+				'url("clr05.png")',
+				'url("clr06.png")',
+				'url("clr07.png")',
+				'url("clr08.png")',
+				'url("clr09.png")',
+				'url("clr10.png")',
+				'url("clr11.png")',
+				'url("clr12.png")',
+				'url("clr13.png")',
+				'url("clr14.png")',
+				'url("clr15.png")',
+				'url("clr16.png")'
+				];
+			
+			const body = document.querySelector('body');
+			body.onclick = function (e) {
+
+				let x = e.pageX - e.target.offsetLeft;
+				let y = e.pageY - e.target.offsetTop;
+
+				let splash = document.createElement('span');
+				splash.style.left = x + 'px';
+				splash.style.top = y + 'px';
+
+				var bg = images[Math.floor(Math.random() * images.length)];
+				splash.style.backgroundImage = bg;
+				this.appendChild(splash);
+
+				setTimeout(() => {
+					splash.remove()
+				},4000);
+			}
+		</script>
+	</body>
+</html>
